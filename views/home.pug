@@ -1,0 +1,25 @@
+extends layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet", href="/css/game.css")
+
+block content
+    main
+        div.header-wrapper
+            h1.header Library
+        if games.length > 0
+            .grid
+                each game in games
+                    article.card.game-item
+                        header.card__header
+                            h1.game__title #{game.title}
+                        div.card__image
+                            img(src=game.imageUrl)
+                        div.card__content
+                            h2.game__price #{game.price}
+                            p.game__description #{game.description}
+                        .card__actions
+                            a(href='game/' + game._id)
+                                button.btn Details
+        else
+            h1 No games

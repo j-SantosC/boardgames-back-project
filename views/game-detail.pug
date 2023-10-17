@@ -1,0 +1,19 @@
+extends layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet", href="/css/detail.css")
+
+block content
+    dvi.detail-wrapper
+        div.header
+            h1.game__title #{game.title}
+        div.card__image
+            img(src=game.imageUrl)
+        div.card__content
+            h2.game__price #{game.price}
+            p.game__description #{game.description}
+        .card__actions
+            a(href='/delete-game', method='POST')
+            form(action="/delete-game" method='POST')
+                input(type="hidden", value=id, name='gameId') 
+                button.btn(type="submit") Delete

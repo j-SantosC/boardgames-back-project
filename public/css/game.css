@@ -1,0 +1,31 @@
+.game-form {
+	width: 20rem;
+	max-width: 90%;
+	margin: auto;
+	display: flex;
+}
+
+.game-item {
+	flex: 1;
+	width: 20rem;
+	padding: 1rem;
+	margin: 1rem;
+}
+.game__title {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.game__price {
+	text-align: center;
+	color: #4d4d4d;
+	margin-bottom: 0.5rem;
+}
+
+.game__description {
+	text-align: center;
+}
+
+img {
+	height: 400px;
+}
